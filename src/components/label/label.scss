@@ -1,0 +1,18 @@
+$mixin-types : ('green', '#18c576', 'white'),
+('yellow', '#ffa726', 'white'),
+('pink', '#ff5bc6', 'white'),
+('purple', '#ac59f1', 'white');
+
+@mixin label($label-type) {
+  @each $type, $color, $text in $mixin-types{
+    @if $label-type == $type {
+      background-color: $color;
+      color: $text;
+    }
+  }
+}
+
+
+// .label {
+//   @include label(-type)
+// }

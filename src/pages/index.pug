@@ -1,0 +1,19 @@
+extends ../layouts/default
+
+block variables
+  - var title = "Главная страница";
+  - var pageStylesheet = "/index.css";
+
+block content
+  section.content-section.content-section_bg_white
+    block section-content
+
+  section.content-section.content-section_type_grid
+    block section-content
+      include ../components/card/card.pug
+      +card('./images/pea.jpeg', 'Горох в стручках, 1 кг', '570 ₽')
+      +card('./images/blueberry.jpeg', 'Голубика лесная, 200 г', '140 ₽')
+      +card('./images/carrot.jpeg', 'Морковь мытая, 1 кг', '140 ₽')
+      +card('./images/popcorn.png', 'Попкорн солёный, для СВЧ-печи, 120 г', '160 ₽')
+      +card('./images/ice_cream.png', 'Эскимо с малиной, 150 г', '190 ₽')
+

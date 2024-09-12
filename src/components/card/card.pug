@@ -1,0 +1,10 @@
+mixin card(image, text, price)
+  article.card
+    .card__image-container
+      img.card__image(src= image, alt= text)
+    .card__content-wrapper.card__content-wrapper_column
+    .card__content
+      p.card__title= text
+      .card__content-wrapper
+        p.card__price= price
+        btn.card__button Оставить заявку
