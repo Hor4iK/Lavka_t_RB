@@ -1,8 +1,3 @@
-// @mixin card($image) {
-//   background-image: url($image);
-//   background-position: center center;
-//   background-size: cover;
-// }
 @import '../../globals/variables.scss';
 
 .card {
@@ -12,6 +7,23 @@
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  // grid-area: card1;
+
+  // &_h-l1 {
+  //   grid-area: h-l1;
+  // }
+
+  // &_h-l2 {
+  //   grid-area: h-l2;
+  // }
+
+  // &_v-l1 {
+  //   grid-area: v-l1;
+  // }
+
+  // &_v-l2 {
+  //   grid-area: v-l2;
+  // }
 
   &__image {
     height: 100%;
@@ -60,10 +72,30 @@
   &__content-wrapper {
     display: flex;
     gap: 7px;
+    align-items: center;
+    justify-content: center;
     align-self: end;
 
     &_column {
       flex-direction: column;
+      align-items: end;
+    }
+  }
+
+  &__status {
+    width: 19px;
+    aspect-ratio: 1/1;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    &_eye {
+      background-image: url(../../images/eye.svg);
+    }
+
+    &_heart {
+      background-image: url(../../images/heart.svg);
     }
   }
 }

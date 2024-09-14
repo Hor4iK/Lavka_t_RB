@@ -1,10 +1,12 @@
-mixin card(image, text, price)
-  article.card
+mixin card(type, image, text, price)
+  .card(class= 'card_'+ type)
     .card__image-container
       img.card__image(src= image, alt= text)
     .card__content-wrapper.card__content-wrapper_column
+      .card__status.card__status_heart
+      .card__status.card__status_eye
     .card__content
       p.card__title= text
       .card__content-wrapper
         p.card__price= price
-        btn.card__button Оставить заявку
+        btn.card__button(type= "button") Оставить заявку
